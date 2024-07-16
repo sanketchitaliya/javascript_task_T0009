@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#remove {
+  background-color: lightblue;
+  border: 1px solid;
+  padding: 50px;
+  color: white;
+  font-size: 20px;
+}
+#myDiv1, #myDiv2 {
+  background-color: rgb(124, 138, 151);
+  padding: 50px;
+}
+
+#myP1, #myP2 {
+  background-color: white; 
+  font-size: 20px;
+  border: 1px solid;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h2>removeEventListener()</h2>
+
+<div id="remove">
+  <p>This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.</p>
+  <p>Click the button to remove the div's event handler.</p>
+  <button onclick="removeHandler()" id="myBtn">Remove</button>
+</div>
+
+<p id="demo"></p>
+
+<h2>addEventListener()</h2>
+
+<div id="myDiv1">
+  <h2>addeventlistner with capture:</h2>
+  <p id="myP1">Click me</p>
+</div><br>
+
+<div id="myDiv2">
+  <h2>capturing:</h2>
+  <p id="myP2">Click me</p>
+</div>
+
+<script>
+document.getElementById("remove").addEventListener("mousemove", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+
+function removeHandler() {
+  document.getElementById("remove").removeEventListener("mousemove", myFunction);
+}
+
+// when define false that time child element event first call
+
+document.getElementById("myP1").addEventListener("click", function() {
+  alert("You clicked the white element!");
+}, false);
+
+document.getElementById("myDiv1").addEventListener("click", function() {
+  alert("You clicked the orange element!");
+}, false);
+
+// when define true that time first parant element event call occure
+
+document.getElementById("myP2").addEventListener("click", function() {
+  alert("You clicked the white element!");
+}, true);
+
+document.getElementById("myDiv2").addEventListener("click", function() {
+  alert("You clicked the orange element!");
+}, true);
+</script>
+
+</body>
+</html>

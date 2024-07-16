@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form event handling</title>
+</head>
+
+<body>
+
+    <h1>simple calculation using dom event:</h1>
+
+    <label>Enter Value 1: </label>
+    <input type="text" id="val1" />
+    <br />
+    <br />
+    <label>Enter Value 2: </label>
+    <input type=".text" id="val2" />
+    <br /><br>
+    <hr>
+    <br>
+    <button onclick="getAdd()">Click To Add</button>
+    <button onclick="getMin()">Click To min</button>
+    <button onclick="getDiv()">Click To div</button>
+    <button onclick="getMul()">Click To mul</button>
+
+    <p id="result"></p>
+    <script type="text/javascript">
+        function getAdd() {
+            
+            
+            const num1 = Number(document.getElementById("val1").value);
+            
+           
+            const num2 = Number(document.getElementById("val2").value);
+            const add = num1 + num2;
+            console.log(add);
+            
+           
+            document.getElementById("result").innerHTML = "Addition : " + add;
+            
+          
+            document.getElementById("result").style.color = "red";
+        }
+        function getMin() {
+            
+            
+            const num1 = Number(document.getElementById("val1").value);
+            
+           
+            const num2 = Number(document.getElementById("val2").value);
+            const add = num1 - num2;
+            console.log(add);
+            
+           
+            document.getElementById("result").innerHTML = "minus : " + add;
+            
+          
+            document.getElementById("result").style.color = "blue";
+        }
+        function getDiv() {
+            
+            
+            const num1 = Number(document.getElementById("val1").value);
+            
+           
+            const num2 = Number(document.getElementById("val2").value);
+            const add = num1 / num2;
+            console.log(add);
+            
+           
+            document.getElementById("result").innerHTML = "division : " + add;
+            
+          
+            document.getElementById("result").style.color = "yellow";
+        }
+        function getMul() {
+            
+            
+            const num1 = Number(document.getElementById("val1").value);
+            
+           
+            const num2 = Number(document.getElementById("val2").value);
+            const add = num1 * num2;
+            console.log(add);
+            
+           
+            document.getElementById("result").innerHTML = "multiple : " + add;
+            
+          
+            document.getElementById("result").style.color = "black";
+        }
+    </script>
+</body>
+
+</html>

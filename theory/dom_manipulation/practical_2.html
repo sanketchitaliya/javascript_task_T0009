@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manipulation</title>
+    <style>
+        .gfg {
+            color: green;
+            font-weight: bold;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>create attribute and set classs after add css</h1>
+    <h2>DOM createAttribute() Method</h2>
+    <button onclick="createattribute()">
+        Submit
+    </button>
+
+    <br><br><hr><br>
+
+    <h3>create attribute and set link in anchor tag</h3>
+    <a id="gfg">
+        Visit our site...
+    </a>
+
+    <button onclick="anchor()">
+        Submit
+    </button>
+
+    <br><br><hr><br>
+
+    <h3>body innerhtml copy and display</h3>
+    <button onclick="body()">copy body tag</button>
+    <p id="copybody"></p>
+
+    <script>
+
+        // create element and set attribute
+
+        function createattribute() {
+            let tag_name =
+                document.getElementsByTagName("h1")[0];
+            let attr =
+                document.createAttribute("class");
+            attr.value = "gfg";
+            tag_name.setAttributeNode(attr);
+        }
+        // create attribute and set value
+
+        function anchor() {
+            let id = document.getElementById("gfg");
+            let new_attr = document.createAttribute("href");
+            new_attr.value = "#";
+            id.setAttributeNode(new_attr);
+        }
+
+        // all body element copy
+
+        function body() {
+            let x = document.body.innerHTML;
+            document.getElementById("copybody").innerHTML =
+                "Display the body content:<br>" + x;
+        }
+    </script>
+</body>
+
+</html>
