@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas_practice</title>
+    <style>
+        #mycanvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+      <canvas id="mycanvas" width="500" height="500"></canvas>
+      <script>
+        const canvas = document.getElementById("mycanvas");
+        const context = canvas.getContext("2d");
+
+        context.moveTo(0,0);
+        context.lineTo(500,500);
+        context.stroke();
+
+        // fillrect(x,y,width,height)
+        
+        context.fillRect(30,30,80,80);
+
+        context.fillRect(110,110,80,80);
+
+        context.fillRect(190,190,80,80);
+
+        context.fillRect(270,270,80,80);
+
+        context.fillRect(350,350,80,80);
+
+        context.arc(75, 75, 500, 0, Math.PI * 2, true);
+        ctx.moveTo(110, 75);
+      </script>
+</body>
+</html>
