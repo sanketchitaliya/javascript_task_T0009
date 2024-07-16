@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todo with popup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="todo_app.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="main-container">
+      <h1>TODO App</h1>
+
+      <div class="add-form">
+        <p>Add New Task</p>
+        <i class="fa fa-plus" id="openModalBtn"></i>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Task</h2>
+            <hr>
+            <br>
+            <form id="popupForm">
+              <label for="name">Task Title:</label><br>
+              <input class="input" type="text" id="name" name="name"><br><br>
+              <div id="msg"></div>
+              <label for="date">Due Date:</label><br>
+              <input class="input" type="date" id="date" name="date"><br><br>
+              <label for="description">Description:</label><br>
+              <textarea class="input" id="textarea" cols="30" rows="5"></textarea><br><br>
+              <input class="submit" id="submit" type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="button-status">
+        <button id="completed-tasks">Completed</button>
+       <button id="incomplete-tasks">Incomplete</button>
+       </div>
+      <h3>Tasks</h3>
+
+      <div id="tasks">
+
+      </div>
+    </div>
+  </div>
+  <script src="todo_app.js"></script>
+</body>
+
+</html>
