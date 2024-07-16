@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player with Playlist</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Music Player</h1>
+        <button id="close-btn" onclick="popup()">Add Song</button>
+        <div class="player">
+            <div class="current-song">
+                <img src="" alt="Song Cover" id="songCover">
+                <div class="song-details">
+                    <h2 id="songTitle">Song Title</h2>
+                    <h3 id="songArtist">Song Artist</h3>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="previous" onclick="previousSong()"><i class="fas fa-step-backward"></i></button>
+                <button id="playPause" onclick="togglePlayPause()"><i class="fas fa-play"></i></button>
+                <button id="next" onclick="nextSong()"><i class="fas fa-step-forward"></i></button>
+            </div>
+            <input type="range" id="seekBar" min="0" max="100" value="0" step="1">
+            <div class="playlist">
+                <h2>PlayList</h2>
+                <ul id="playlistItems">
+
+                </ul>
+                <div id="popup">
+                    <input type="text" id="newSongTitle" placeholder="Song Title">
+                    <input type="text" id="newSongArtist" placeholder="Artist">
+                    <input type="text" id="newCoverInput" placeholder="cover Photo">
+                    <input type="url" required id="newSongInput" placeholder="addSong">
+                    <button onclick="addSong()">Add Song</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <audio id="musicPlayer" src=""></audio>
+    <script src="index.js"></script>
+</body>
+
+</html>
