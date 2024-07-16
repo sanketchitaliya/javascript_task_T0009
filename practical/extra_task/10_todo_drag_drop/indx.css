@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(224, 228, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+
+#app {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 800px;
+  max-height: 800px;
+  overflow: auto;
+}
+
+#app::-webkit-scrollbar {
+  display: none;
+}
+
+#input-container {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+#input {
+  padding: 8px;
+  width: calc(100% - 80px);
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+#input:focus {
+  outline: none;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  background-color: green;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(2, 77, 2);
+}
+
+.todo-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item.dragging {
+  opacity: 0.5;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-item p {
+  margin: 0;
+  flex: 1;
+  overflow-wrap: break-word;
+}
+
+.todo-item .update, .todo-item .delete {
+  padding: 6px 10px;
+  margin-left: 6px;
+  cursor: pointer;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 4px;
+}
+
+.todo-item .update {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.todo-item .update:hover, .todo-item .delete:hover {
+  opacity: 0.8;
+}
+
+.todo-list {
+  min-height: 50px;
+}
