@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+body {
+  background-color: #fff;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  margin: 10px 0px;
+  color: green;
+  font-size: 30px;
+}
+.rules-main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+}
+ul {
+  list-style: none;
+}
+ul li{
+  padding: 10px 0;
+}
+#rules {
+  font-weight: bold;
+  font-size: 20px;
+}
+ul li {
+  font-size: 18px;
+}
+.game{
+  margin-top: 30px;
+}
+#guessValue {
+  font-size: 15px;
+  height: 24px;
+  padding: 5px 10px;
+}
+#hint {
+  margin: 15px 0px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.btn {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 2px 8px;
+  margin: 2px 5px;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: green;
+  color: black;
+  border: none;
+}
