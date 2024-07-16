@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location app</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-image: linear-gradient(to top, rgb(168, 237, 234) 0%, rgb(254, 214, 227) 100%);
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .content {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+            flex-direction: column;
+        }
+
+        button {
+            border: none;
+            background-color: white;
+            padding: 25px 40px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: lightblue;
+        }
+
+        .showDetails,
+        .fulladdress,
+        .formattedaddress {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="main">
+        <button class="geo-btn">show user location</button>
+        <p class="showDetails">user location details</p>
+        <p class="fulladdress">user address</p>
+        <p class="formattedaddress">user address details</p>
+    </div>
+    </div>
+    <script>
+
+        const shoeDetails = document.querySelector('.showDetails');
+        const fulladdress = document.querySelector('.fulladdress');
+        const formattedaddress = document.querySelector('.formattedaddress');
+
+
+
+        // api to get user
+        let apiendpoint = "https://api.opencagedata.com/geocode/v1/json"
+        let apikey = "fdb99128f26740d0a0847abe33c5aa49";
+
+        const getUserCurrentAddress = async (latitude, longitude) => {
+            //console.log(latitude);
+            let query = `${latitude},${longitude}`;
+            let apiurl = `${apiendpoint}?key=${apikey}&q=${query}&pretty=1`;
+
+            try {
+                const res = await fetch(apiurl);
+                const data = await res.json();
+                console.log(data);
+
+                // object destructuring
+                const { state_district, state, postcode, country } = data.results[0].components;
+                fulladdress.textContent = `user address:${state_district},${state},${postcode},${country}`;
+                formattedaddress.textContent = `user full address:${data.results[0].formatted}`;
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+
+        document.querySelector('.geo-btn').addEventListener('click', () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    console.log(position);
+                    const { latitude, longitude } = position.coords;
+                    shoeDetails.textContent = `the latitude${latitude}&longitude${longitude}`;
+
+                    getUserCurrentAddress(latitude, longitude);
+
+                }, (error) => {
+                    shoeDetails.textContent = error.message;
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

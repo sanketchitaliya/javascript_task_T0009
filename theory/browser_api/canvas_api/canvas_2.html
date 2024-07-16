@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas examples</title>
+    <link rel="stylesheet" href="canvas_2.css">
+</head>
+
+<body>
+    <div class="canvas_div">
+        <canvas id="mycanvas" style="border: 1px solid white;"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById("mycanvas");
+        const context = canvas.getContext("2d");
+        const width = 400;
+        const height = 600;
+        let paddlewidth = 50;
+        let paddleheight = 10;
+
+        canvas.width = width;
+        canvas.height = height;
+
+        // create rect
+        context.fillStyle = "black";
+        context.fillRect(0, 0, width, height);
+
+        // paddle
+        context.fillStyle = "white";
+        context.fillRect(175, 10, paddlewidth, paddleheight);
+
+        context.fillStyle = "white";
+        context.fillRect(175, height - 20, paddlewidth, paddleheight);
+
+        // create a line
+
+        context.beginPath();
+        context.setLineDash([6]);
+        context.moveTo(0, height / 2);
+        context.lineTo(width, height / 2);
+        context.strokeStyle = "grey";
+        context.stroke();
+
+        // create a circle
+        context.beginPath();
+        // parameter (x,y,radius of circle, startposition,endengle,clockwise)
+        context.arc(width / 2, height / 2, 10, 2 * Math.PI, false);
+        context.fillStyle = "white";
+        context.fill();
+
+        //text
+
+        context.font = "32px josefin Sans";
+        context.fillText(10, 20, height / 2 - 30);
+        context.fillText(15, 20, height / 2 + 50);
+
+    </script>
+</body>
+
+</html>
