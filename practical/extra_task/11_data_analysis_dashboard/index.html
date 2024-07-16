@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Data Analysis Of Employe</h1>
+    </header>
+    <div class="container">
+        <h2 class="companyName">Chroma Enterprise</h2>
+        <div class="filtrdata">
+            <p class="filtersection">Employee List: <select id="searchEmployeName"></select></p>
+        </div>
+        <div class="AverageSection">
+            <div class="card1">
+                <p>Employee Name</p>
+                <p id="EmpName" class="fetch-data"></p>
+            </div>
+            <div class="card1">
+                <p>Average Attendance</p>
+                <p id="average" class="fetch-data"></p>
+            </div>
+            <div class="card1">
+                <p>Salary Growth</p>                      
+                <p id="SalaryGrowt" class="fetch-data"></p>
+            </div>
+            <div class="card1">
+                <p>Max Selling</p>
+                <p id="MaxSalling" class="fetch-data"></p>   
+            </div>
+        </div>
+        <div class="charContainer">
+            <div class="barchart">
+                <canvas id="barChart" class="chartJS"></canvas>
+            </div>
+            <div class="linechart">
+                <canvas id="salaryGrowthChart" class="chartJS"></canvas>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
