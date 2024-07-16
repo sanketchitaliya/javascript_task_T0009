@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .bg {
+            background-color: black;
+        }
+    </style>
+    <title>create element</title>
+
+</head>
+
+<body class="bg">
+
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "sanket")  // custom attribute
+    div.style.backgroundColor = "green"
+    div.style.color = "white"
+    div.style.textAlign = "center"
+    div.style.padding = "20px"
+    div.style.fontSize = "28px"
+    // div.innerText="sanket ddhgs cfsf"
+    const addtext = document.createTextNode("happy vibes")
+    div.appendChild(addtext)
+    document.body.appendChild(div)
+
+
+    const h1 = document.createElement('h1')
+    console.log(h1);
+    h1.className = "main2"
+    h1.id = Math.round(Math.random() * 10 + 1)
+    h1.setAttribute("title", "sanket")  // custom attribute
+    h1.style.backgroundColor = "steelblue"
+    h1.style.color = "white"
+    h1.style.textAlign = "center"
+    h1.style.padding = "20px"
+    h1.style.fontSize = "28px"
+    // div.innerText="sanket ddhgs cfsf"
+    const addtext2 = document.createTextNode("happy birthday");
+    h1.appendChild(addtext2)
+    document.body.appendChild(h1)
+
+    const tar = document.querySelector(".main2").parentElement;
+   console.log(tar);
+</script>
+
+</html>

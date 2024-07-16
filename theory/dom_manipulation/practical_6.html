@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question</title>
+    <style>
+        .main{
+            height: 300px;
+            width: 300px;
+            background-color: steelblue;
+        }
+        .main2{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(110, 142, 168);
+        }
+        .p{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(213, 225, 233);
+            display: flex;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="main2">
+            <p class="p">
+                <a href="#">box model</a>
+            </p>
+        </div>
+    </div>
+    <script>
+        // when click on main div that explain 
+         document.querySelector(".main").addEventListener('click',(e)=>{
+            let val = e.target.parentNode;
+            console.log(val);
+        })
+    </script>
+</body>
+</html>

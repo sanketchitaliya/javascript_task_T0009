@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple dom manipulation</title>
+</head>
+
+<body onclick="GFG()">
+
+    <h2>DOM Introduction Example</h2>
+
+    <br><br><hr><br>
+
+    <h3>onclick event and innerhtml changes event</h3>
+    <p id="demo" onclick=changeText()>Hello!</p>
+
+    <br><br><hr><br>
+
+    <h3>selctor use and adding extra content in html</h3>
+    <p id="intro">Finding HTML Elements by Id</p>
+
+    <p id="setintro"></p>
+
+    <br><br><hr><br>
+
+    <button type="button" onclick="changeText()">Click Me!</button>
+    <p id="getelement"></p>
+
+    <br><br><hr><br>
+    
+    <h3>index vise selectors in this example</h3>
+    <a name="">htmnl</a><br>
+    <a name="">css</a><br>
+    <a name="">js</a><br><br>
+
+    <p id="sudo"></p>
+
+    <br><br><hr><br>
+
+    <h3>dom open close event</h3>
+
+    <button onclick=oc()>Submit</button>
+
+    <script>
+
+        let x = document.anchors[1].innerHTML;
+        document.getElementById("sudo").innerHTML
+            = "Second Anchor element: " + x;
+
+        function GFG() {
+            // Get Active Element using activeElement
+
+            let x = document.activeElement.tagName;
+            document.getElementById("getelement").innerHTML = x;
+        }
+
+        const element = document.getElementById("intro");
+
+        document.getElementById("setintro").innerHTML = "hello how are you " + element.innerHTML;
+
+
+
+
+        sanket = "hello! how are you";
+
+        function changeText() {
+            document.getElementById("demo").innerHTML = sanket;
+        }
+
+        // dom open close method
+
+        function oc() {
+            document.open();
+            document.write("<h1>PRACTICE</h1>");
+            document.close();
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

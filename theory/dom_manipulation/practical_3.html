@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom event</title>
+    <style>
+        .cs {
+            color: black;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body onresize="onresizes()">
+
+    <h3>oninput event in input tag</h3>
+
+    OnInputEvent:<input type="text" id="fname" oninput="uppercase()">
+
+    <br><br>
+    <hr><br>
+
+    <h3>onchange event in input tag</h3>
+
+    onchangeevent:<input type="text" id="lname" onchange="upper()">
+
+    <br><br>
+    <hr><br>
+
+    <h3>mouse over and mouse out event</h3>
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:#f3bcb5;width:120px;height:20px;padding:40px;">
+        Mouse Over Me</div>
+
+    <br><br>
+    <hr><br>
+
+    <h3>double click event</h3>
+
+    <button ondblclick="dbclick()">Doubbleclick</button>
+
+    <br><br>
+    <hr><br>
+
+    <h3>rightclick event</h3>
+
+    <button oncontextmenu="rightclick()">Oncontextmenu</button>
+
+    <script>
+
+        // oninput event 
+        function uppercase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+        // onchange event
+        function upper() {
+            const x = document.getElementById("lname");
+            x.value = x.value.toUpperCase();
+        }
+
+        // mouse over event
+        function mOver(obj) {
+            obj.innerHTML = "Thank You"
+            obj.style.backgroundColor = "#1ec5e5";
+
+        }
+        // mouse out event
+        function mOut(obj) {
+            obj.innerHTML = "Mouse Over Me"
+            obj.style.backgroundColor = "yellow";
+        }
+
+        // double click event
+
+        function dbclick() {
+            alert("hello everyone");
+        }
+
+        // right click event
+
+        function rightclick() {
+            alert("hello right click");
+        }
+
+        // window size event
+
+        function onresizes() {
+            alert("when window resize call this event");
+        }
+    </script>
+</body>
+
+</html>
