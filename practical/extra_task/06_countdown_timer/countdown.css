@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+#countdown {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+label{
+    font-size: 20px;
+}
+input[type=number]{
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #2b4216;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #0056b3;
+}
