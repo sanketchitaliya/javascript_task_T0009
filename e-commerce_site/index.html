@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css file -->
+    <link rel="stylesheet" href="./css/home.css" />
+
+    <!-- font awesome icon  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <title>Tomatoo</title>
+
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="./img/logo.png"></img></a>
+                </div>
+                <div class="right-part">
+                    <div class="right">
+
+                        <div class="navlinks">
+                            <ul>
+                                <li><a class="link" href="#">Home</a></li>
+                                <li><a class="link" href="#explore-menu">Explore menu</a></li>
+                                <li><a class="link" href="#food-display">Products</a></li>
+                                <li>
+                                    <a class="link" href="registration.html" id="loginuser">
+                                        Log In
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="link" id="profile"  onclick="addtoprofile()">
+                                        <img class="basket-icon" alt="add to cart" src="./img/profile_icon.png"
+                                            id="basket-icon"></img>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="account">
+                                        <a onclick="addtocart()" class="link">
+                                            <img class="basket-icon" alt="add to cart" src="./img/bag_icon.png"
+                                                id="basket-icon"></img>
+                                            <p class="absolute">0</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="link" onclick="logoutUser()" id="logout">
+                                        <img class="basket-icon" alt="add to cart" src="./img/logout_icon.png"></img>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="rightbtn">
+                    <i class="icon fa fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- section  -->
+
+    <div class="container">
+        <div class="header">
+            <div class="header-contents">
+                <h2>Order Your favourite food here</h2>
+                <p>
+                    choose from a diverse menu featuring a delectable array of dishes
+                    crafted with the finest ingrediants and satisfy your cravings amd
+                    elevete your dining experience, one delicious meal a time.
+                </p>
+                <button><a href="#food-display">view point</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- exploormenu -->
+
+
+    <div class="container">
+        <div class="explore-menu" id="explore-menu">
+            <h1>Explore our menu</h1>
+            <p class="explore-menu-text">
+                choose from a diverse menu featuring a delectable array of dishes
+                crafted with the finest ingrediants and satisfy your cravings amd
+                elevete your dining experience, one delicious meal a time.
+            </p>
+            <div class="explore-menu-list">
+                <div class="explore-menu-list-item " data-category="Salad">
+                    <img class="active" src="./img/menu_1.png" alt="" />
+                    <p>Salad</p>
+                </div>
+                <div class="explore-menu-list-item " data-category="Rolls">
+                    <img class="active" src="./img/menu_2.png" alt="" />
+                    <p>Rolls</p>
+                </div>
+                <div class="explore-menu-list-item " data-category="Deserts">
+                    <img class="active" src="./img/menu_3.png" alt="" />
+                    <p>Deserts</p>
+                </div>
+                <div class="explore-menu-list-item " data-category="Sandwich">
+                    <img class="active" src="./img/menu_4.png" alt="" />
+                    <p>Sandwich</p>
+                </div>
+                <div class="explore-menu-list-item " data-category="Cake">
+                    <img class="active" src="./img/menu_5.png" alt="" />
+                    <p>Cake</p>
+                </div>
+                <div class="explore-menu-list-item " data-category="Pure Veg">
+                    <img class="active" src="./img/menu_6.png" alt="" />
+                    <p>Pure Veg</p>
+                </div>
+                <div class="explore-menu-list-item " data-category="Pasta">
+                    <img class="active" src="./img/menu_7.png" alt="" />
+                    <p>Pasta</p>
+                </div>
+                <div class="explore-menu-list-item " data-category="Noodles">
+                    <img class="active" src="./img/menu_8.png" alt="" />
+                    <p>Noodles</p>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+
+
+    <!--food display-->
+    <div class="container">
+        <div class="food-display" id="food-display">
+            <h2>Top dishes near you</h2>
+            <div class="food-display-list">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- appdownload -->
+
+    <div class="container">
+        <div class='app-download' id='app-download'>
+            <p>For better Experience Download <br />Tommato App</p>
+            <div class="app-download-platform">
+                <img src="./img/play_store.png" alt='' />
+                <img src="./img/app_store.png" alt='' />
+            </div>
+        </div>
+    </div>
+
+
+    <!-- foooter -->
+
+    <div class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-content-left">
+                <img src="./img/logo.png" alt="" />
+                <p>
+                    the types of information that Zomato may collect from you when you access or use its websites,
+                    applications and other online services (collectively, referred as "Services"); and
+                    its practices for collecting, using, maintaining, protecting and disclosing that information.
+                </p>
+                <div class="footer-social-icon">
+                    <img src="./img/facebook_icon.png" alt="" /></img>
+                    <img src="./img/twitter_icon.png" alt="" /></img>
+                    <img src="./img/linkedin_icon.png" alt="" /></img>
+                </div>
+            </div>
+            <div class="footer-content-center">
+                <h2>company</h2>
+                <ul>
+                    <li>home</li>
+                    <li>About us</li>
+                    <li>delivery</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="footer-content-right">
+                <h2>Get In Touch</h2>
+                <ul>
+                    <li>+91 77788 76388</li>
+                    <li>sanketchitaliya@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <p class="footer-copyright">
+            Copyright 2024 @ Tomato.com -All right Reserved.
+        </p>
+    </div>
+    <script src="./js/display_products.js"></script>
+</body>
+
+</html>
